@@ -16,9 +16,20 @@ while (running){
         window.alert("Please enter a valid number");
     }
     else if(guess < minNum || guess > maxNum){  //checks for the entered number to be in range or not 
-        window.alert("Please enter a valid number")
+        window.alert("Please enter a valid number");
+    }
+    else{
+        attempts++ ;  //increase the attempts chance to guess the no. 
+        if (guess < answer){
+            window.alert("Entered value is too low , try again !");
+        }
+        else if (guess > answer){
+            window.alert("Entered value is too high, try again !")
+        }
+        else {
+            window.alert(`Congrats you guessed the answer in ${attempts} attempts`)
+            running = false; //it makes sure to close the game or program 
+        }
     }
 
-
-    running = false; //it makes sure to close the game or program 
 }
