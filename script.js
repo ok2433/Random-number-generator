@@ -12,6 +12,13 @@ while (running){
     guess = Number(guess); //without this , the output we get is string so  we use this to convert it number
     // console.log(typeof guess, guess); 
 
+    if(isNaN(guess)){   // this inNaN checks if the no. (i.e. guess is a no. or not)
+        window.alert("Please enter a valid number");
+    }
+    else if(guess < minNum || guess > maxNum){  //checks for the entered number to be in range or not 
+        window.alert("Please enter a valid number")
+    }
+
 
     running = false; //it makes sure to close the game or program 
 }
