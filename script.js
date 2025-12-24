@@ -1,35 +1,31 @@
 const minNum = 1;
 const maxNum = 100;
-const answer = Math.floor(Math.random() * ( maxNum - minNum + 1));
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1));
 
-let attempts = 0 ; //to keep track of the no. of attempts
+let attempts = 0; //to keep track of the no. of attempts
 let guess;
-let running = true; //to make the game run and close it 
+let running = true; //to make the game run and close it
 
-while (running){
+while (running) {
+  guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
+  guess = Number(guess); //without this , the output we get is string so  we use this to convert it number
+  // console.log(typeof guess, guess);
 
-    guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
-    guess = Number(guess); //without this , the output we get is string so  we use this to convert it number
-    // console.log(typeof guess, guess); 
-
-    if(isNaN(guess)){   // this inNaN checks if the no. (i.e. guess is a no. or not)
-        window.alert("Please enter a valid number");
+  if (isNaN(guess)) {
+    // this inNaN checks if the no. (i.e. guess is a no. or not)
+    window.alert("Please enter a valid number");
+  } else if (guess < minNum || guess > maxNum) {
+    //checks for the entered number to be in range or not
+    window.alert("Please enter a valid number");
+  } else {
+    attempts++; //increase the attempts chance to guess the no.
+    if (guess < answer) {
+      window.alert("Entered value is too low , try again !");
+    } else if (guess > answer) {
+      window.alert("Entered value is too high, try again !");
+    } else {
+      window.alert(`Congrats you guessed the answer in ${attempts} attempts`);
+      running = false; //it makes sure to close the game or program
     }
-    else if(guess < minNum || guess > maxNum){  //checks for the entered number to be in range or not 
-        window.alert("Please enter a valid number");
-    }
-    else{
-        attempts++ ;  //increase the attempts chance to guess the no. 
-        if (guess < answer){
-            window.alert("Entered value is too low , try again !");
-        }
-        else if (guess > answer){
-            window.alert("Entered value is too high, try again !")
-        }
-        else {
-            window.alert(`Congrats you guessed the answer in ${attempts} attempts`)
-            running = false; //it makes sure to close the game or program 
-        }
-    }
-
+  }
 }
