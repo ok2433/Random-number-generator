@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -14,13 +14,13 @@
 
     <div id="value-entry">
       <label> Enter min number :</label>
-      <input type="text" placeholder="Min number" />
-      <button>Submit</button>
+      <input type="text" placeholder="Min number" id="minval"/>
+      <button onclick="submitmin">Submit</button>
       <br />
       <br />
       <label> Enter max number :</label>
-      <input type="text" placeholder="Max number" />
-      <button>Submit</button>
+      <input type="text" placeholder="Max number" id="maxval"/>
+      <button onclick="submitmax">Submit</button>
     </div>
 
     <div id="Play">
