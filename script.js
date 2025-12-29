@@ -34,32 +34,23 @@ let minnumber;
 let maxnumber;
 
 function submitmin() {
-    let inputmin = document.getElementById("minval");
-     minnumber = Number(inputmin.value);
-    
-     if (inputmin.value === "") {
+  let inputmin = document.getElementById("minval");
+  if (inputmin.value === "") {
     console.log("Input is empty");
-} else {
+  } else {
     console.log("Input has value:", inputmin.value);
+  }
+  minnumber = Number(inputmin.value);
 }
-};
 
 function submitmax() {
-    let inputmax = document.getElementById("maxval");
-     maxnumber = Number(inputmax.value);
-
-     if (inputmax.value === ""){
+  let inputmax = document.getElementById("maxval");
+  if (inputmax.value === "") {
     console.log("Input is empty");
-
-}else {
-    console.log("Input has value:", inputmin.value);
+  } else {
+    console.log("Input has value:", inputmax.value);
+  }
+  maxnumber = Number(inputmax.value);
 }
-
-};
-
-
-
-
-
 
 // while (running) {}
