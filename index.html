@@ -14,24 +14,25 @@
 
     <div id="value-entry">
       <label> Enter min number :</label>
-      <input type="text" placeholder="Min number" id="minval"/>
+      <input type="number" placeholder="Min number" id="minval"/>
       <button onclick="submitmin()">Submit</button>
       <br />
       <br />
       <label> Enter max number :</label>
-      <input type="text" placeholder="Max number" id="maxval"/>
+      <input type="number" placeholder="Max number" id="maxval"/>
       <button onclick="submitmax()">Submit</button>
     </div>
 
     <div id="Play">
-      <button>
+      <button onclick="play()">
         <h2>Play Now</h2>
       </button>
     </div>
 
     <div id="guessnumber">
-      <input type="text" placeholder="Input the guessed number" />
-      <button>Sumbit</button>
+      <input type="text" placeholder="Input the guessed number" id="guessnum" />
+      <button onclick="submit()">Sumbit</button>
+      <p id="numcorrect"></p>
     </div>
   </body>
 </html>

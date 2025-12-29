@@ -32,6 +32,8 @@
 
 let minnumber;
 let maxnumber;
+let guess;
+let running = true;
 
 function submitmin() {
   let inputmin = document.getElementById("minval");
@@ -53,4 +55,16 @@ function submitmax() {
   maxnumber = Number(inputmax.value);
 }
 
-// while (running) {}
+function play() {
+    document.getElementById("userguess").style.display = "block"
+    guess = document.getElementById("guessnum");
+
+    guess = Number(guess.value);
+
+}
+function submit(){
+
+    if (isNaN(guess)){
+        document.getElementById("numcorrect").textContent = "Please Enter a Valid Number"
+    }
+}
