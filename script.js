@@ -56,21 +56,24 @@ function submitmax() {
 }
 
 function play() {
+  if (minnumber === undefined || maxnumber === undefined) {
+    alert("Please Enter Valid Max and Min number");
+    return;
+  }
 
-    if (minnumber === undefined || maxnumber === undefined){
-      alert("Please Enter Valid Max and Min number")
-      return;
-    }
+  random = Math.floor(Math.random() * (maxnumber - minnumber + 1)) + minnumber;
+  console.log("Random number: ", random);
 
-    document.getElementById("userguess").style.display = "block"
-    guess = document.getElementById("guessnum");
-
-    guess = Number(guess.value);
-
+  document.getElementById("userguess").style.display = "block";
 }
-function submit(){
+function submit() {
+  guess = document.getElementById("guessnum");
 
-    if (isNaN(guess)){
-        document.getElementById("numcorrect").textContent = "Please Enter a Valid Number"
-    }
+  guess = Number(guess.value);
+
+  if (guess.value === "" || isNaN(guess)){
+    document.getElementById("numcorrect").textcontent = "Please Enter a Valid Number";
+    return;
+  }
+  document.getElementById("numcomrrect").textcontent = "You Guessed :"+  guess ; 
 }
