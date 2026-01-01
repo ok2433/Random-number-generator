@@ -56,6 +56,12 @@ function submitmax() {
 }
 
 function play() {
+
+    if (minnumber === undefined || maxnumber === undefined){
+      alert("Please Enter Valid Max and Min number")
+      return;
+    }
+
     document.getElementById("userguess").style.display = "block"
     guess = document.getElementById("guessnum");
 
