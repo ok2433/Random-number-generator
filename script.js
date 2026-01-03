@@ -34,6 +34,7 @@ let minnumber;
 let maxnumber;
 let guess;
 let running = true;
+let attempts = 0;
 
 function submitmin() {
   let inputmin = document.getElementById("minval");
@@ -66,14 +67,41 @@ function play() {
 
   document.getElementById("userguess").style.display = "block";
 }
+
+
+
+
+
+
+
 function submit() {
-  guess = document.getElementById("guessnum");
+  let guessinput = document.getElementById("guessnum");
 
-  guess = Number(guess.value);
+  let guess = Number(guessinput.value);
 
-  if (guess.value === "" || isNaN(guess)){
-    document.getElementById("numcorrect").textcontent = "Please Enter a Valid Number";
+  if (guessinput.value === "" || isNaN(guess)) {
+    document.getElementById("numcorrect").textContent =
+      "Please Enter a Valid Number";
     return;
+  } 
+  
+  if (guess < minnumber || guess > maxnumber) {
+    document.getElementById("numcorrect").textContent =
+      "Please enter the number within given max and min number";
   }
-  document.getElementById("numcomrrect").textcontent = "You Guessed :"+  guess ; 
+
+  attempts++;
+  document.getElementById("attemptno").textContent = `Total Attempts = ${attempts}`
+
+
+  if (guess === random) {
+    document.getElementById("numcorrect").textContent =
+      "You Guessed the correct number :" + guess;
+  } else if (guess < random) {
+    document.getElementById("numcorrect").textContent =
+      "Entered Value is too low ";
+  } else   {
+    document.getElementById("numcorrect").textContent =
+      "Entered Value is too high";
+  }
 }
