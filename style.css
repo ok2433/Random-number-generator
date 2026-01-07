@@ -1,3 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+
 #userguess {
-    display: none;
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#value-entry,
+#Play,
+#userguess {
+  text-align: center;
+}
+
+#value-entry,
+#userguess {
+  padding: 10px;
+  margin: 45px;
+}
+
+body {
+  background-image: url(istockphoto-1872087220-640x640.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 95vh;
+  /* background: ; */
+}
+h1 {
+  color: #64b0dd;
+  font-size: 75px;
+  font-family: Barrio;
+}
+
+h2 {
+  color: #64b0dd;
+  /* background-color: blue  ; */
+  font-family: Barrio;
+}
+
+label {
+  font-family: Kirang Haerang;
+  font-size: 25px;
+  color: #64b0dd;
+}
+
+/* h1:hover {
+  font-size: 100px;
+  transition-duration: 0.5s;
+} */
+#Play button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px;
+  margin: 10px;
+
+}
+
+#Play button:hover {
+
 }
