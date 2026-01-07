@@ -23,21 +23,21 @@ h1 {
 }
 
 body {
-  background-image: url(istockphoto-1872087220-640x640.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 95vh;
-  /* background: ; */
+  background-color: #161700; 
+  /* background-color:#010017;  */
+}
+
+.same_col{
+  color : #979b00;
 }
 h1 {
-  color: #64b0dd;
+ 
   font-size: 75px;
   font-family: Barrio;
 }
 
 h2 {
-  color: #64b0dd;
+
   /* background-color: blue  ; */
   font-family: Barrio;
 }
@@ -45,7 +45,7 @@ h2 {
 label {
   font-family: Kirang Haerang;
   font-size: 25px;
-  color: #64b0dd;
+  
 }
 
 /* h1:hover {
@@ -59,9 +59,5 @@ label {
   border-radius: 20px;
   padding: 10px 30px 10px 30px;
   margin: 10px;
-
-}
-
-#Play button:hover {
 
 }

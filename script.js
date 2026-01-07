@@ -96,7 +96,7 @@ function submit() {
 
   if (guess === random) {
     document.getElementById("numcorrect").textContent =
-      "Congrats ! You Guessed the correct number :" + guess;
+      `Congrats ! You took ${attempts} attempts to guess correct number that is  : ` + guess;
   } else if (guess < random) {
     document.getElementById("numcorrect").textContent =
       "Entered Value is too low ";
